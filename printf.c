@@ -7,6 +7,7 @@
 * returns: total number of characters written
 *on failure, a negative number is returned
 */
+
 int _printf(const char *format, ...)
 {
 unsigned int i;
@@ -16,7 +17,7 @@ va_list list;
 
 va_start(list, format_len);
 
-#code goes here
+//code goes here
 
 va_end(list);
 free(format);
