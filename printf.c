@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * printf: sends formatted output to stdout
+ * _printf - sends formatted output to stdout
  * @format: text to be written to stdout
  *
- * returns: total number of characters written
+ * Return: total number of characters written
  * on failure, a negative number is returned
  */
 
@@ -28,10 +28,7 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					string = va_arg(list, char *);
-					while (string && *string != '\0')
-					{
-						printc(*string++);
-					}
+					prints(string);
 					break;
 				default:
 					break;
@@ -43,5 +40,5 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(list);
-	return(format_len);
+	return (format_len);
 }
