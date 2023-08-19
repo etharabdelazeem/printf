@@ -25,7 +25,7 @@ int prints(char *string)
 	{
 		printc(*string++);
 	}
-	return (0);
+	return (_strlen(string));
 }
 
 /**
@@ -37,7 +37,7 @@ int no_of_digits(int i)
 {
 	int count = 0;
 
-	while(i)
+	while (i)
 	{
 		i /= 10;
 		count++;
@@ -50,7 +50,7 @@ int no_of_digits(int i)
  * @i: integer
  * Return: nothing
  */
-void printd(int i)
+int printd(int i)
 {
 	int count = no_of_digits(i);
 	int tens = 1, c = count - 1, num;
@@ -67,4 +67,5 @@ void printd(int i)
 		tens /= 10;
 		count--;
 	}
+	return (no_of_digits(i));
 }

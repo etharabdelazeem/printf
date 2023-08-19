@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int format_len, count = 0;
+	int format_len, count = 0, return_value = 0;
 	va_list list;
 	char *string;
 
@@ -23,31 +23,35 @@ int _printf(const char *format, ...)
 		{
 			switch (format[++count])
 			{
+				case '\0':
+					break;
 				case 'c':
 					printc(va_arg(list, int));
+					return_value++;
 					break;
 				case 's':
 					string = va_arg(list, char *);
-					prints(string);
+					return_value += prints(string);
 					break;
 				case '%':
 					printc('%');
-					break;
-				case 'i':
-					printd(va_arg(list, int));
-					break;
-				case 'd':
-					printd(va_arg(list, int));
+					return_value++;
 					break;
 				default:
+					printc('%');
+					printc(format[count]);
+					return_value += 2;
 					break;
 			}
 		}
 		else
+		{
 			printc(format[count]);
+			return_value++;
+		}
 		count++;
 	}
 
 	va_end(list);
-	return (format_len);
+	return (return_value);
 }
