@@ -52,7 +52,7 @@ int no_of_digits(int i)
  */
 int printd(int i)
 {
-	int count = no_of_digits(i);
+	int count = no_of_digits(i), return_value = 0;
 	int tens = 1, c = count - 1, num;
 
 	while (c)
@@ -64,8 +64,9 @@ int printd(int i)
 	{
 		num = (i / tens) % 10;
 		printc('0' + num);
+		(return_value)++
 		tens /= 10;
 		count--;
 	}
-	return (no_of_digits(i));
+	return (return_value);
 }
