@@ -27,27 +27,27 @@ int _printf(const char *format, ...)
 					break;
 				case 'c':
 					printc(va_arg(list, int));
-					return_value++;
+					(return_value)++;
 					break;
 				case 's':
 					string = va_arg(list, char *);
-					return_value += prints(string);
+					(return_value) += prints(string);
 					break;
 				case '%':
 					printc('%');
-					return_value++;
+					(return_value)++;
 					break;
 				default:
 					printc('%');
 					printc(format[count]);
-					return_value += 2;
+					(return_value) += 2;
 					break;
 			}
 		}
 		else
 		{
 			printc(format[count]);
-			return_value++;
+			(return_value)++;
 		}
 		count++;
 	}
