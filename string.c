@@ -27,3 +27,44 @@ int prints(char *string)
 	}
 	return (0);
 }
+
+/**
+ * no_of_digits - number of digits
+ * @i: integer
+ * Return: number of digits
+ */
+int no_of_digits(int i)
+{
+	int count = 0;
+
+	while(i)
+	{
+		i /= 10;
+		count++;
+	}
+	return (count);
+}
+
+/**
+ * printd - print integers
+ * @i: integer
+ * Return: nothing
+ */
+void printd(int i)
+{
+	int count = no_of_digits(i);
+	int tens = 1, c = count - 1, num;
+
+	while (c)
+	{
+		tens *= 10;
+		c--;
+	}
+	while (count)
+	{
+		num = (i / tens) % 10;
+		printc('0' + num);
+		tens /= 10;
+		count--;
+	}
+}

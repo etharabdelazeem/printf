@@ -30,6 +30,15 @@ int _printf(const char *format, ...)
 					string = va_arg(list, char *);
 					prints(string);
 					break;
+				case '%':
+					printc('%');
+					break;
+				case 'i':
+					printd(va_arg(list, int));
+					break;
+				case 'd':
+					printd(va_arg(list, int));
+					break;
 				default:
 					break;
 			}
