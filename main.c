@@ -14,7 +14,7 @@ int main(void)
 	_printf("something\n");
 	_printf("an other thing %c heheehe\n", 'o');
 	_printf("Let'%c ma%ce %c pu%c%cle\n", 's', 'k', 'a', z, z);
-	_printf("Stringg %s", "this\n");
+	_printf("Strin%c %s %s", 'g', "this\n", 's');
 
 	return (0);
 }

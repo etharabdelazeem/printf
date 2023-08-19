@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 {
 	int format_len, count = 0;
 	va_list list;
+	char *string;
 
 	va_start(list, format);
 
@@ -20,8 +21,21 @@ int _printf(const char *format, ...)
 	{
 		if (format[count] == '%')
 		{
-			if (format[++count] == 'c')
-				printc(va_arg(list, int));
+			switch (format[++count])
+			{
+				case 'c':
+					printc(va_arg(list, int));
+					break;
+				case 's':
+					string = va_arg(list, char *);
+					while (string && *string != '\0')
+					{
+						printc(*string++);
+					}
+					break;
+				default:
+					break;
+			}
 		}
 		else
 			printc(format[count]);
