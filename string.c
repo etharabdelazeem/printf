@@ -64,7 +64,7 @@ int printd(int i)
 	{
 		num = (i / tens) % 10;
 		printc('0' + num);
-		(return_value)++
+		(return_value)++;
 		tens /= 10;
 		count--;
 	}
