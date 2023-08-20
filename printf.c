@@ -24,6 +24,7 @@ int _printf(const char *format, ...)
 			switch (format[++count])
 			{
 				case '\0':
+					return(-1);
 					break;
 				case ' ':
 					break;
