@@ -32,6 +32,39 @@ int prints(char *string)
 }
 
 /**
+ * printd - print integers
+ * @i: integer
+ * Return: nothing
+ */
+int printd(int i)
+{
+	int count, return_value = 0, tens = 1, c, num;
+
+	if (i < 0)
+	{
+		printc('-');
+		(return_value)++;
+		i *= -1;
+	}
+	count = no_of_digits(i);
+	c = count - 1;
+	while (c)
+	{
+		tens *= 10;
+		c--;
+	}
+	while (count)
+	{
+		num = (i / tens) % 10;
+		printc('0' + num);
+		(return_value)++;
+		tens /= 10;
+		count--;
+	}
+	return (return_value);
+}
+
+/**
  * no_of_digits - number of digits
  * @i: integer
  * Return: number of digits
@@ -49,3 +82,4 @@ int no_of_digits(int i)
 	}
 	return (count);
 }
+
