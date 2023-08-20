@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * struct - new type
+ * struct functions - new type
  * @ch: character
  * @f: pointer to function
  */
