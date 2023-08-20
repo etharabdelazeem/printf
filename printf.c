@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
+	if (!format)
+		return (-1);
 	format_len = _strlen((char *)format);
 	while (count < format_len)
 	{
@@ -25,6 +27,7 @@ int _printf(const char *format, ...)
 					return (-1);
 					break;
 				case ' ':
+					return (-1);
 					break;
 				case 'c':
 					(return_value) += printc(list);;
