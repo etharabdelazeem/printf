@@ -64,3 +64,4 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (return_value);
 }
+
