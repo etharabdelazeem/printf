@@ -17,12 +17,6 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 
 	format_len = _strlen((char *)format);
-	if (format == NULL)
-	{
-		return (-1);
-	}
-	else
-	{
 	while (count < format_len)
 	{
 		if (format[count] == '%')
@@ -65,7 +59,6 @@ int _printf(const char *format, ...)
 			(return_value)++;
 		}
 		count++;
-	}
 	}
 
 	va_end(list);
