@@ -67,8 +67,8 @@ int prints(va_list list)
 int printd(va_list list)
 {
 	int i, count, return_value = 0, tens = 1, c, num;
-	i = va_arg(list, int);
 
+	i = va_arg(list, int);
 	if (i < 0)
 	{
 		_putchar('-');
