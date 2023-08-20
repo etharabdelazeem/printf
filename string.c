@@ -23,19 +23,11 @@ int prints(char *string)
 {
 	int return_value = 0;
 
-	if (string == NULL)
-	{
-		fputs("(null)",stdout);
-		return_value += 6;
-	}
-	else
-	{
-		while (string && *string != '\0')
-			{
-			printc(*string++);
-			(return_value)++;
-			}
-	}
+	while (string && *string != '\0')
+		{
+		printc(*string++);
+		(return_value)++;
+		}
 	return (return_value);
 }
 
