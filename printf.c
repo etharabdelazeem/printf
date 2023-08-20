@@ -39,6 +39,12 @@ int _printf(const char *format, ...)
 					printc('%');
 					(return_value)++;
 					break;
+				case 'd':
+					(return_value) += printd(va_arg(list, int));
+					break;
+				case 'i':
+					(return_value) += printd(va_arg(list, int));
+					break;
 				default:
 					printc('%');
 					printc(format[count]);

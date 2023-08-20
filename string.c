@@ -40,7 +40,9 @@ int no_of_digits(int i)
 {
 	int count = 0;
 
-	while (i)
+	if (i == 0)
+		return (++count);
+	while (i > 0)
 	{
 		i /= 10;
 		count++;
@@ -55,9 +57,16 @@ int no_of_digits(int i)
  */
 int printd(int i)
 {
-	int count = no_of_digits(i), return_value = 0;
-	int tens = 1, c = count - 1, num;
+	int count, return_value = 0, tens = 1, c, num;
 
+	if (i < 0)
+	{
+		printc('-');
+		(return_value)++;
+		i *= -1;
+	}
+	count = no_of_digits(i);
+	c = count - 1;
 	while (c)
 	{
 		tens *= 10;
