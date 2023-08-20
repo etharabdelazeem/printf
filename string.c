@@ -47,6 +47,10 @@ int prints(va_list list)
 	char *string;
 
 	string = va_arg(list, char *);
+	if (!string)
+	{
+		string = "(null)";
+	}
 	while (string && *string != '\0')
 	{
 		_putchar(*string++);
