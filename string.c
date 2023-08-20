@@ -21,11 +21,14 @@ int _strlen(char *s)
  */
 int prints(char *string)
 {
+	int return_value = 0;
+
 	while (string && *string != '\0')
 	{
 		printc(*string++);
+		(return_value)++;
 	}
-	return (_strlen(string));
+	return (return_value);
 }
 
 /**

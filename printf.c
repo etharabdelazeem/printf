@@ -25,6 +25,8 @@ int _printf(const char *format, ...)
 			{
 				case '\0':
 					break;
+				case ' ':
+					break;
 				case 'c':
 					printc(va_arg(list, int));
 					(return_value)++;
