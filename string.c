@@ -15,19 +15,43 @@ int _strlen(char *s)
 }
 
 /**
+ * _strcmp - compares two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: less than 0 if s1 is less than s2,
+ * 0 if they're equal,
+ * more than 0 if s1 is greater than s2
+ */
+int _strcmp(char *s1, char *s2)
+{
+	while (*s1 == *s2)
+	{
+		if (*s1 == '\0')
+		{
+			return (0);
+		}
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}
+
+/**
  * prints - print strings
- * @string: string to print
+ * @list: list of arguments
  * Return: number of characters printed
  */
-int prints(char *string)
+int prints(va_list list)
 {
 	int return_value = 0;
+	char *string;
 
+	string = va_arg(list, char *);
 	while (string && *string != '\0')
-		{
-		printc(*string++);
+	{
+		_putchar(*string++);
 		(return_value)++;
-		}
+	}
 	return (return_value);
 }
 
@@ -36,13 +60,14 @@ int prints(char *string)
  * @i: integer
  * Return: nothing
  */
-int printd(int i)
+int printd(va_list list)
 {
-	int count, return_value = 0, tens = 1, c, num;
+	int i, count, return_value = 0, tens = 1, c, num;
+	i = va_arg(list, int);
 
 	if (i < 0)
 	{
-		printc('-');
+		_putchar('-');
 		(return_value)++;
 		i *= -1;
 	}
@@ -56,7 +81,7 @@ int printd(int i)
 	while (count)
 	{
 		num = (i / tens) % 10;
-		printc('0' + num);
+		_putchar('0' + num);
 		(return_value)++;
 		tens /= 10;
 		count--;
