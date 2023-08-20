@@ -16,17 +16,25 @@ int _strlen(char *s)
 
 /**
  * prints - print strings
- * @string: string tp print
- * Return: nothing
+ * @string: string to print
+ * Return: number of characters printed
  */
 int prints(char *string)
 {
 	int return_value = 0;
 
-	while (string && *string != '\0')
+	if (string == NULL)
 	{
-		printc(*string++);
-		(return_value)++;
+		fputs("(null)",stdout);
+		return_value += 6;
+	}
+	else
+	{
+		while (string && *string != '\0')
+			{
+			printc(*string++);
+			(return_value)++;
+			}
 	}
 	return (return_value);
 }
