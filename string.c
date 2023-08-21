@@ -43,20 +43,18 @@ int _strcmp(char *s1, char *s2)
  */
 int prints(va_list list)
 {
-	int return_value = 0;
+	int length;
 	char *string;
 
 	string = va_arg(list, char *);
 	if (!string)
 	{
-		string = "(null)";
+		write(1, "(null)", 6);
+		return (6);
 	}
-	while (string && *string != '\0')
-	{
-		_putchar(*string++);
-		(return_value)++;
-	}
-	return (return_value);
+	length = _strlen(string);
+	write(1, string, length);
+	return (length);
 }
 
 /**
