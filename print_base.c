@@ -107,44 +107,6 @@ int printhex(va_list list)
 }
 
 /**
- * printHEX - printhexadecimal
- * @list: var_list
- * Return: printed amount of chars
- */
-int printHEX(va_list list)
-{
-	int i, count, return_value = 0, tens = 1, c, num, base = 16;
-	char letter[] = {'A', 'B', 'C', 'D', 'E', 'F'};
-
-	i = va_arg(list, int);
-	if (i < 0)
-	{
-		_putchar('-');
-		(return_value)++;
-		i *= -1;
-	}
-	count = no_of_digits(i, base);
-	c = count - 1;
-	while (c)
-	{
-		tens *= base;
-		c--;
-	}
-	while (count)
-	{
-		num = (i / tens) % base;
-		if (num > '9')
-			_putchar(letter[num - 10]);
-		else
-			_putchar('0' + num);
-		(return_value)++;
-		tens /= base;
-		count--;
-	}
-	return (return_value);
-}
-
-/**
  * printb - converts unsigned int into binary
  * @list: var_list
  * Return: number of digits printed.

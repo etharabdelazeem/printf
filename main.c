@@ -20,6 +20,7 @@ int main(void)
 	printf("%d\n", _printf("%d \t %i\n", 4754, -3267478));
 	printf("%d\n", _printf("%o, %i", 5555555555, NULL));
 	printf("%d\n", _printf("%b %b %b", 7, 8, 17));
+	printf("%d\n", _printf("%S"), "abcd\n\t");
 
 	return (0);
 }

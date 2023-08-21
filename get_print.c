@@ -14,7 +14,7 @@ int (*check(char ch))(va_list list)
 		{'d', printd}, {'i', printd}, {'b', printb},
 		{'u', printu}, {'o', printo},
 		{'x', printhex}, {'X', printHEX},
-		{'\0', NULL}
+		{'S', printS}, {'\0', NULL}
 	};
 
 	while (functions[i].ch)
