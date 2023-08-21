@@ -5,14 +5,14 @@
  * @list_ va_list
  * Return: printed amount
  */
-int printu(va_list)
+int printu(va_list list)
 {
 	int i, count, return_value = 0, tens = 1, c, num, base = 4;
 
 	i = va_arg(list, int);
 	if (i < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		(return_value)++;
 		i *= -1;
 	}
@@ -73,7 +73,7 @@ int printo(va_list list)
  * @list: var_list
  * Return: printed amount of chars
  */
-int printhex(va_list)
+int printhex(va_list list)
 {
 	int i, count, return_value = 0, tens = 1, c, num, base = 16;
 	char letter[] = {'a', 'b', 'c', 'd', 'e', 'f'};
@@ -81,7 +81,7 @@ int printhex(va_list)
 	i = va_arg(list, int);
 	if (i < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		(return_value)++;
 		i *= -1;
 	}
@@ -111,7 +111,7 @@ int printhex(va_list)
  * @list: var_list
  * Return: printed amount of chars
  */
-int printhex(va_list)
+int printHEX(va_list list)
 {
 	int i, count, return_value = 0, tens = 1, c, num, base = 16;
 	char letter[] = {'A', 'B', 'C', 'D', 'E', 'F'};
@@ -119,7 +119,7 @@ int printhex(va_list)
 	i = va_arg(list, int);
 	if (i < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		(return_value)++;
 		i *= -1;
 	}
