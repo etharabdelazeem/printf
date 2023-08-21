@@ -75,7 +75,7 @@ int printd(va_list list)
 		(return_value)++;
 		i *= -1;
 	}
-	count = no_of_digits(i);
+	count = no_of_digits(i, 10);
 	c = count - 1;
 	while (c)
 	{
@@ -96,9 +96,10 @@ int printd(va_list list)
 /**
  * no_of_digits - number of digits
  * @i: integer
+ * @base: which base
  * Return: number of digits
  */
-int no_of_digits(int i)
+int no_of_digits(int i, int base)
 {
 	int count = 0;
 
@@ -106,7 +107,7 @@ int no_of_digits(int i)
 		return (++count);
 	while (i > 0)
 	{
-		i /= 10;
+		i /= base;
 		count++;
 	}
 	return (count);

@@ -18,6 +18,7 @@ int main(void)
 	printf("%d\n", _printf("Strin%c %s %s\n", 'g', "this", str));
 	printf("%d\n", _printf("o\"\'\\% %% \n %k %k\n"));
 	printf("%d\n", _printf("%d \t %i\n", 4754, -3267478));
+	printf("%d\n", _printf("%o, %i", 5555555555, NULL));
 
 	return (0);
 }

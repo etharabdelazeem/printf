@@ -12,6 +12,8 @@ int (*check(char ch))(va_list list)
 	fun functions[] = {
 		{'c', printc}, {'s', prints},
 		{'d', printd}, {'i', printd},
+		{'u', printu}, {'o', printo},
+		{'x', printhex}, {'X', printHEX},
 		{'\0', NULL}
 	};
 
