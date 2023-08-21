@@ -1,6 +1,26 @@
 #include "main.h"
 
 /**
+ * ifcheck - check
+ * @ch: char
+ * Return: count
+ */
+int ifcheck(char ch)
+{
+	int return_value = 0;
+
+	if (ch == '%')
+	{
+		_putchar('%'), (return_value)++;
+	}
+	else
+	{
+		 _putchar('%'), _putchar(ch), (return_value) += 2;
+	}
+	return (return_value);
+}
+
+/**
  * _printf - sends formatted output to stdout
  * @format: text to be written to stdout
  *
@@ -20,26 +40,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[count] == '%')
 		{
-			f = check(format[count]);
-			if (format[++count] == '\0' || format[count] == ' ')
-			{
-					return (-1);
-			}
+			f = check(format[++count]);
+			if (format[count] == '\0' || (format[count] == ' ' && !format[count + 1]))
+				return (-1);
 			else if (f)
-			{
 				(return_value) += f(list);
-			}
+
 			else
-			{
-				if (format[count] == '%')
-				{
-					_putchar('%'), (return_value)++;
-				}
-				else
-				{
-					_putchar('%'), _putchar(format[count]), (return_value) += 2;
-				}
-			}
+				(return_value) += ifcheck(format[count]);
 		}
 		else
 		{
@@ -51,4 +59,3 @@ int _printf(const char *format, ...)
 	va_end(list);
 	return (return_value);
 }
-
