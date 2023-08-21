@@ -21,6 +21,7 @@ int main(void)
 	printf("%d\n", _printf("%o, %i", 5555555555, NULL));
 	printf("%d\n", _printf("%b %b %b", 7, 8, 17));
 	printf("%d\n", _printf("%S"), "abcd\n\t");
+	printf("%d\n", _printf("%x  %X"), 33, 33);
 
 	return (0);
 }
