@@ -61,7 +61,7 @@ int prints(va_list list)
 
 /**
  * printd - print integers
- * @i: integer
+ * @list: list to print from
  * Return: nothing
  */
 int printd(va_list list)

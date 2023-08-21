@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * struct functions - new type
@@ -10,7 +11,7 @@
 typedef struct functions
 {
 	char ch;
-	int (*f)();
+	int (*f)(va_list list);
 } fun;
 
 int _putchar(char c);
@@ -21,5 +22,6 @@ int _printf(const char *format, ...);
 int no_of_digits(int i);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
+int (*check(char ch))(va_list list);
 
 #endif

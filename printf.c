@@ -9,59 +9,41 @@
  */
 int _printf(const char *format, ...)
 {
-	int format_len, count = 0, return_value = 0;
+	int count = 0, return_value = 0, (*f)(va_list);
 	va_list list;
 
 	va_start(list, format);
 
 	if (!format)
 		return (-1);
-	format_len = _strlen((char *)format);
-	while (count < format_len)
+	while (format && format[count])
 	{
 		if (format[count] == '%')
 		{
-			switch (format[++count])
+			f = check(format[count]);
+			if (format[++count] == '\0' || format[count] == ' ')
 			{
-				case '\0':
 					return (-1);
-					break;
-				case ' ':
-					return (-1);
-					break;
-				case 'c':
-					(return_value) += printc(list);;
-					break;
-				case 's':
-					(return_value) += prints(list);
-					break;
-				case '%':
-					_putchar('%');
-					(return_value)++;
-					break;
-				case 'd':
-					(return_value) += printd(list);
-					break;
-				case 'i':
-					(return_value) += printd(list);
-					break;
-				default:
-					_putchar('%');
-					_putchar(format[count]);
-					(return_value) += 2;
-					break;
 			}
-		}
-		else if (format[count] == '\\')
-		{
-			if (format[++count] == '%')
-				_putchar('%');
-			else count--;
+			else if (f)
+			{
+				(return_value) += f(list);
+			}
+			else
+			{
+				if (format[count] == '%')
+				{
+					_putchar('%'), (return_value)++;
+				}
+				else
+				{
+					_putchar('%'), _putchar(format[count]), (return_value) += 2;
+				}
+			}
 		}
 		else
 		{
-			_putchar(format[count]);
-			(return_value)++;
+			_putchar(format[count]), (return_value)++;
 		}
 		count++;
 	}
