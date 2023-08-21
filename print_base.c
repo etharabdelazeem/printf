@@ -143,3 +143,25 @@ int printHEX(va_list list)
 	}
 	return (return_value);
 }
+
+
+/**
+*printb: converts unsigned int into binary
+*@list: var_list
+*Return: number of digits printed.
+*/
+int printb(va_list list)
+{
+	int i, return_value = 0, place = 1;
+    int num = va_arg(list, unsigned int);
+    while(num) 
+    	{ 
+        rem = num % 2;
+        num = num / 2; 
+        _putchar(rem * place); 
+        place = place * 10; 
+        (return_value)++;
+        } 
+    
+    return (return_value);
+}
