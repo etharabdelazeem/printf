@@ -18,6 +18,7 @@ typedef struct functions
 int _putchar(char c);
 int printc(va_list list);
 int prints(va_list list);
+int printb(va_list list);
 int printd(va_list list);
 int printu(va_list list);
 int printo(va_list list);
