@@ -49,6 +49,11 @@ int printb(va_list list)
 
 	num = va_arg(list, unsigned int);
 	i = num;
+	if (i == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	return_value = bits(i);
 	printbin(i);
 
