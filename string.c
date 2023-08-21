@@ -66,16 +66,19 @@ int prints(va_list list)
  */
 int printd(va_list list)
 {
-	int i, count, return_value = 0, tens = 1, c, num;
+	int i;
+	unsigned int i2, count, return_value = 0, tens = 1, c, num;
 
 	i = va_arg(list, int);
 	if (i < 0)
 	{
 		_putchar('-');
 		(return_value)++;
-		i *= -1;
+		i2 = -1 * i;
 	}
-	count = no_of_digits(i, 10);
+	else
+		i2 = i;
+	count = no_of_digits(i2, 10);
 	c = count - 1;
 	while (c)
 	{
@@ -84,7 +87,7 @@ int printd(va_list list)
 	}
 	while (count)
 	{
-		num = (i / tens) % 10;
+		num = (i2 / tens) % 10;
 		_putchar('0' + num);
 		(return_value)++;
 		tens /= 10;
@@ -99,7 +102,7 @@ int printd(va_list list)
  * @base: which base
  * Return: number of digits
  */
-int no_of_digits(int i, int base)
+int no_of_digits(unsigned int i, int base)
 {
 	int count = 0;
 
@@ -112,4 +115,3 @@ int no_of_digits(int i, int base)
 	}
 	return (count);
 }
-

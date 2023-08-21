@@ -23,7 +23,7 @@ int printo(va_list list);
 int printhex(va_list list);
 int printHEX(va_list list);
 int _printf(const char *format, ...);
-int no_of_digits(int i, int base);
+int no_of_digits(unsigned int i, int base);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 int (*check(char ch))(va_list list);

@@ -2,7 +2,7 @@
 
 /**
  * printu - print base 4
- * @list_ va_list
+ * @list: va_list
  * Return: printed amount
  */
 int printu(va_list list)
