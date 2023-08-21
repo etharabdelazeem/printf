@@ -95,7 +95,7 @@ int printhex(va_list list)
 	while (count)
 	{
 		num = (i / tens) % base;
-		if (num > '9')
+		if (num > 9)
 			_putchar(letter[num - 10]);
 		else
 			_putchar('0' + num);
