@@ -2,6 +2,7 @@
 
 /**
 * print_rot13: prints the rot13 equivalent of the string
+* @list: list of arguments
 * returns: number of characters printed
 */
 
