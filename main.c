@@ -3,14 +3,12 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * mainhalf - getting rid of betty
+ * Return: nothing
  */
-int main(void)
+void mainhalf(void)
 {
 	char z = 'z';
-	int i = 0;
 	char *str = "I thought It was my code, it turned out to be me";
 
 	printf("%d\n", _printf("something\n"));
@@ -36,6 +34,18 @@ int main(void)
 	printf("%d\n", _printf("%X_X ", NULL)), printf("%X ", NULL);
 	printf("%d\n", _printf("%x_x ", NULL)), printf("%x ", NULL);
 	printf("%d\n", _printf("%u_u ", NULL)), printf("%u ", NULL);
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	int i = 0;
+
+	mainhalf();
 	printf("%d\n", _printf("%p ", &i));
 	printf("%d\n", _printf("%R", "string"));
 	printf("%d\n", _printf("%r", "string"));
