@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * printu_h - print unsigned numbers
- * @list: va_list
+ * printo_h - print octal
+ * @list: list of args
  * Return: printed amount
  */
-int printu_h(va_list list)
+int printo_h(va_list list)
 {
-	short int x, count, return_value = 0, tens = 1, c, num, base = 10;
+	short int x, count, return_value = 0, tens = 1, c, num, base = 8;
 	unsigned short int i;
 
 	x = va_arg(list, int);
@@ -30,14 +30,16 @@ int printu_h(va_list list)
 	return (return_value);
 }
 
+#include "main.h"
+
 /**
- * printu_l - print unsigned numbers
- * @list: va_list
+ * printo_l - print octal
+ * @list: list of args
  * Return: printed amount
  */
-int printu_l(va_list list)
+int printo_l(va_list list)
 {
-	long int x, count, return_value = 0, tens = 1, c, num, base = 10;
+	long int x, count, return_value = 0, tens = 1, c, num, base = 8;
 	unsigned long int i;
 
 	x = va_arg(list, long int);

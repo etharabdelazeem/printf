@@ -24,6 +24,7 @@ int (*check(const char *ch, int index))(va_list list)
 		{"hd", printd_h}, {"ld", printd_l},
 		{"hi", printd_h}, {"li", printd_l},
 		{"hu", printu_h}, {"lu", printu_l},
+		{"ho", printo_h}, {"lo", printo_l},
 		{"r", tnirp}, {"R", print_rot13},
 		{NULL, NULL}
 	};
@@ -70,6 +71,7 @@ int check2(const char *ch, int index)
 		{"hd", printd_h}, {"ld", printd_l},
 		{"hi", printd_h}, {"li", printd_l},
 		{"hu", printu_h}, {"lu", printu_l},
+		{"ho", printo_h}, {"lo", printo_l},
 		{"r", tnirp}, {"R", print_rot13},
 		{NULL, NULL}
 	};

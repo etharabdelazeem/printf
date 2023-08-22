@@ -46,6 +46,9 @@ int main(void)
 	puts("unsigned");
 	printf("%d\n", _printf("%lu_lu ", 555554338)), printf("%lu ", 555554338);
 	printf("%d\n", _printf("%hu_hu ", 554338)), printf("%hu ", 554338);
+	puts("octal");
+	printf("%d\n", _printf("%lo_lo ", 555554338)), printf("%lo ", 555554338);
+	printf("%d\n", _printf("%ho_ho ", 554338)), printf("%ho ", 554338);
 
 	return (0);
 }

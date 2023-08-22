@@ -30,6 +30,9 @@ int printu_h(va_list list);
 int printu_l(va_list list);
 
 int printo(va_list list);
+int printo_h(va_list list);
+int printo_l(va_list list);
+
 int printh(unsigned int);
 int printhex(va_list list);
 int printH(unsigned int);
