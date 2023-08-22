@@ -41,7 +41,7 @@ int printo_h(va_list list)
  */
 int printo_l(va_list list)
 {
-	long int x, count, return_value = 0, tens = 1, c, num, base = 8;
+	long int x, count, num, return_value = 0, tens = 1, c, base = 8;
 	unsigned long int i;
 
 	x = va_arg(list, long int);
@@ -56,6 +56,8 @@ int printo_l(va_list list)
 	while (count)
 	{
 		num = (i / tens) % base;
+		if (num < 0)
+			num *= -1;
 		_putchar('0' + num);
 		(return_value)++;
 		tens /= base;
