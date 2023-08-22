@@ -42,7 +42,7 @@ int printu_l(va_list list)
 
 	x = va_arg(list, long int);
 	i = x;
-	count = no_of_digits(i, base);
+	count = no_of_digits_l(i, base);
 	c = count - 1;
 	while (c)
 	{

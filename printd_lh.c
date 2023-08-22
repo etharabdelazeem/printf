@@ -56,7 +56,7 @@ int printd_l(va_list list)
 	}
 	else
 		i2 = i;
-	count = no_of_digits(i2, 10);
+	count = no_of_digits_l(i2, 10);
 	c = count - 1;
 	while (c)
 	{
