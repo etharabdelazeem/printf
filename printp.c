@@ -13,17 +13,17 @@ int printp(va_list list)
 	int b;
 	int i;
 
-	p = va_arg(list, void*);
-	if (p == NULL)
+	ptr = va_arg(list, void*);
+	if (ptr == NULL)
 	{
-		for (i = 0; s[i] != '\0'; i++)
+		for (i = 0; str[i] != '\0'; i++)
 		{
-			_putchar(s[i]);
+			_putchar(str[i]);
 		}
 		return (i);
 	}
 
-	a = (unsigned long int)p;
+	a = (unsigned long int)ptr;
 	_putchar('0');
 	_putchar('x');
 	b = printhex(a);
