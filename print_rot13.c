@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* print_rot13: prints the rot13 equivalent of the string
-* @list: list of arguments
-* returns: number of characters printed
-*/
+ * print_rot13 - prints the rot13 equivalent of the string
+ * @list: list of arguments
+ * Return: number of characters printed
+ */
 
 int print_rot13(va_list list)
 {
