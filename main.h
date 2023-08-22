@@ -26,6 +26,9 @@ int printd_l(va_list list);
 int printd_h(va_list list);
 
 int printu(va_list list);
+int printu_h(va_list list);
+int printu_l(va_list list);
+
 int printo(va_list list);
 int printh(unsigned int);
 int printhex(va_list list);

@@ -43,6 +43,9 @@ int main(void)
 	printf("%d\n", _printf("%hd_hd ", 54338)), printf("%hd ", 54338);
 	printf("%d\n", _printf("%li_li ", 54338)), printf("%li ", 54338);
 	printf("%d\n", _printf("%hi_hi ", 54338)), printf("%hi ", 54338);
+	puts("unsigned");
+	printf("%d\n", _printf("%lu_lu ", 555554338)), printf("%lu ", 555554338);
+	printf("%d\n", _printf("%hu_hu ", 554338)), printf("%hu ", 554338);
 
 	return (0);
 }
