@@ -10,6 +10,7 @@
 int main(void)
 {
 	char z = 'z';
+	int i = 0;
 	char *str = "I thought It was my code, it turned out to be me";
 
 	printf("%d\n", _printf("something\n"));
@@ -35,6 +36,7 @@ int main(void)
 	printf("%d\n", _printf("%X_X ", NULL)), printf("%X ", NULL);
 	printf("%d\n", _printf("%x_x ", NULL)), printf("%x ", NULL);
 	printf("%d\n", _printf("%u_u ", NULL)), printf("%u ", NULL);
+	printf("%d\n", _printf(("%p ", &i));
 
 	return (0);
 }
