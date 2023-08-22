@@ -27,7 +27,7 @@ int printhex(va_list list);
 int printH(unsigned int);
 int printHEX(va_list list);
 int printS(va_list list);
-int printp(va_list list, int);
+int printp(va_list list);
 int tnirp(va_list list);
 int print_rot13(va_list list);
 int _printf(const char *format, ...);
