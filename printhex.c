@@ -20,7 +20,7 @@ int printh(unsigned int i)
 		return (return_value);
 	}
 
-	printH(i / 16);
+	printh(i / 16);
 
 	if (rem > 9)
 		_putchar(letter[rem - 10]);
