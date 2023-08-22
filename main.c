@@ -21,11 +21,13 @@ int main(void)
 	printf("%d\n", _printf("%o, %i", 5555555555, NULL));
 	printf("%d\n", _printf("%b %b %b, %b %b %b", 7, 8, 17, 0, NULL, -1));
 	printf("%d\n", _printf("%S"), "abcd\n\t");
-	printf("%d\n", _printf("%x_s ", 54338)), printf("%x ", 54338);
-	printf("%d\n", _printf("%X_c ", 54338)), printf("%X ", 54338);
+	printf("%d\n", _printf("%x_x ", 54338)), printf("%x ", 54338);
+	printf("%d\n", _printf("%X_X ", 54338)), printf("%X ", 54338);
+	printf("%d\n", _printf("%o_o ", 54338)), printf("%o ", 54338);
+	printf("%d\n", _printf("%u_u ", 54338)), printf("%u ", 54338);
+	puts("Negative");
 	printf("%d\n", _printf("%u_u ", -54338)), printf("%u ", -54338);
 	printf("%d\n", _printf("%o_o ", -54338)), printf("%o ", -54338);
-	printf("%d\n", _printf("%o_o ", 54338)), printf("%o ", 54338);
 	printf("%d\n", _printf("%x_x ", -54338)), printf("%x ", -54338);
 	printf("%d\n", _printf("%X_X ", -54338)), printf("%X ", -54338);
 	puts("NULL");

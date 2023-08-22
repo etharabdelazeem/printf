@@ -15,7 +15,12 @@ int (*check(const char *ch, int index))(va_list list)
 		{"b", printb}, {"u", printu},
 		{"o", printo}, {"x", printhex},
 		{"X", printHEX}, {"S", printS},
-		{NULL, NULL}
+		{"+u", printu}, {"+X", printHEX},
+		{"+o", printo}, {"+x", printhex},
+		{" u", printu}, {" X", printHEX},
+		{" o", printo}, {" x", printhex},
+		{"#i", printd}, {"#d", printd},
+		{"#u", printu}, {NULL, NULL}
 	};
 
 	first_index = index;
