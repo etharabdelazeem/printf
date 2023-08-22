@@ -13,7 +13,7 @@ int printp(va_list list)
 	int b;
 	int i;
 
-	ptr = va_arg(list, int);
+	ptr = va_arg(list, int *);
 	if (!ptr)
 	{
 		for (i = 0; str[i] != '\0'; i++)
