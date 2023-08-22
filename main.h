@@ -58,6 +58,7 @@ int print_rot13(va_list list);
 int _printf(const char *format, ...);
 
 int no_of_digits(unsigned int i, int base);
+int no_of_digits_l(unsigned long int i, int base);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 

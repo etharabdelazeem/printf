@@ -59,7 +59,7 @@ int printh_l(unsigned long int i)
 	long int count, return_value = 0, tens = 1, c, num, base = 16;
 	char letter[] = {'a', 'b', 'c', 'd', 'e', 'f'};
 
-	count = no_of_digits(i, base);
+	count = no_of_digits_l(i, base);
 	c = count - 1;
 	while (c)
 	{
