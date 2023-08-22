@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * printh - printhex
+ * printH - printhex
  * @i: number to print
  * Return: printed amount
  */
-int printh(unsigned int i)
+int printH(unsigned int i)
 {
 	int return_value = 0, base = 16;
-	char letter[] = {'a', 'b', 'c', 'd', 'e', 'f'};
+	char letter[] = {'A', 'B', 'C', 'D', 'E', 'F'};
 	unsigned int rem;
 
 	rem = i % 16;
@@ -19,7 +19,7 @@ int printh(unsigned int i)
 		return (return_value);
 	}
 
-	printh(i / 16);
+	printH(i / 16);
 
 	if (rem > 9)
 		_putchar(letter[rem - 10]);
@@ -32,11 +32,11 @@ int printh(unsigned int i)
 }
 
 /**
- * printhex - printhexadecimal
+ * printHEX - printhexadecimal
  * @list: var_list
  * Return: printed amount of chars
  */
-int printhex(va_list list)
+int printHEX(va_list list)
 {
 	int i, return_value = 0;
 	unsigned int i2;
@@ -50,7 +50,7 @@ int printhex(va_list list)
 	}
 	else
 		i2 = i;
-	(return_value) = printh(i2);
+	(return_value) = printH(i2);
 
 	return (return_value);
 }
