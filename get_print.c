@@ -20,7 +20,8 @@ int (*check(const char *ch, int index))(va_list list)
 		{" u", printu}, {" X", printHEX},
 		{" o", printo}, {" x", printhex},
 		{"#i", printd}, {"#d", printd},
-		{"#u", printu}, {NULL, NULL}
+		{"#u", printu}, {NULL, NULL},
+		{"p", printp}
 	};
 
 	first_index = index;
