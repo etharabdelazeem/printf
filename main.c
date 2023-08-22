@@ -36,7 +36,9 @@ int main(void)
 	printf("%d\n", _printf("%X_X ", NULL)), printf("%X ", NULL);
 	printf("%d\n", _printf("%x_x ", NULL)), printf("%x ", NULL);
 	printf("%d\n", _printf("%u_u ", NULL)), printf("%u ", NULL);
-	printf("%d\n", _printf(("%p ", &i));
+	printf("%d\n", _printf("%p ", &i));
+	printf("%d\n", _printf("%R", "string"));
+	printf("%d\n", _printf("%r", "string"));
 
 	return (0);
 }
