@@ -12,7 +12,7 @@
  */
 typedef struct functions
 {
-	char ch;
+	char *ch;
 	int (*f)(va_list list);
 } fun;
 
@@ -31,6 +31,6 @@ int _printf(const char *format, ...);
 int no_of_digits(unsigned int i, int base);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
-int (*check(char ch))(va_list list);
+int (*check(const char *ch, int index))(va_list list);
 
 #endif

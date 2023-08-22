@@ -9,9 +9,9 @@ int bits(unsigned int i)
 {
 	int x;
 
-	for(x = 0; i > 0; i /= 2, x++)
+	for (x = 0; i > 0; i /= 2, x++)
 		;
-	return(x);
+	return (x);
 }
 
 /**
@@ -34,7 +34,6 @@ void printbin(unsigned int num)
 	printbin(num / 2);
 	_putchar(rem + '0');
 
-	return;
 }
 
 /**
@@ -54,7 +53,7 @@ int printb(va_list list)
 		_putchar('0');
 		return (1);
 	}
-	return_value = bits(i);
+	(return_value) = bits(i);
 	printbin(i);
 
 	return (return_value);

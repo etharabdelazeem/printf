@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[count] == '%')
 		{
-			f = check(format[++count]);
+			f = check(format, ++count);
 			if (format[count] == '\0' || (format[count] == ' ' && !format[count + 1]))
 				return (-1);
 			else if (f)
