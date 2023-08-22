@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printp: - prints the memory address in hexadecimal form.
+ * printp - prints the memory address in hexadecimal form.
  * @list: arguments.
  * Return: number of arguments printed
  */
@@ -26,6 +26,6 @@ int printp(va_list list)
 	a = (unsigned long int)ptr;
 	_putchar('0');
 	_putchar('x');
-	b = printhex(a);
+	b = printh(a);
 	return (b + 2);
 }
