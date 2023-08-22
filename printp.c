@@ -25,6 +25,6 @@ int printp(va_list list)
 	a = (unsigned long int)ptr;
 	_putchar('0');
 	_putchar('x');
-	b = printh(a);
+	b = printh_l(a);
 	return (b + 2);
 }

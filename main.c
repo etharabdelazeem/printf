@@ -46,7 +46,7 @@ int main(void)
 	int i = 0;
 
 	mainhalf();
-	printf("%d\n", _printf("%p ", &i));
+	printf("%d\n", _printf("%p_p ", &i)), printf("%p_pp ", &i);
 	printf("%d\n", _printf("%R", "string"));
 	printf("%d\n", _printf("%r", "string"));
 	printf("%d\n", _printf("%ld_ld ", 54338)), printf("%ld ", 54338);
