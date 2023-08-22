@@ -23,6 +23,7 @@ int printb(va_list list);
 int printd(va_list list);
 int printu(va_list list);
 int printo(va_list list);
+int printh(unsigned int);
 int printhex(va_list list);
 int printH(unsigned int);
 int printHEX(va_list list);
