@@ -59,6 +59,11 @@ int main(void)
 	puts("octal");
 	printf("%d\n", _printf("%lo_lo ", 555554338)), printf("%lo ", 555554338);
 	printf("%d\n", _printf("%ho_ho ", 554338)), printf("%ho ", 554338);
+	puts("HEX");
+	printf("%d\n", _printf("%lx_lx ", 55555554338)), printf("%lx ", 55555554338);
+	printf("%d\n", _printf("%lX_lo ", 55555554338)), printf("%lX ", 55555554338);
+	printf("%d\n", _printf("%hx_hx ", 555554338)), printf("%hx ", 555554338);
+	printf("%d\n", _printf("%hX_hX ", 555554338)), printf("%hX ", 555554338);
 
 	return (0);
 }

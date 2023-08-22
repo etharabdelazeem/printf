@@ -5,7 +5,7 @@
  * @i: number to print
  * Return: printed amount
  */
-int printH_h(unsigned int i)
+int printH_h(unsigned short int i)
 {
 	short int count, return_value = 0, tens = 1, c, num, base = 16;
 	char letter[] = {'A', 'B', 'C', 'D', 'E', 'F'};
@@ -54,7 +54,7 @@ int printHEX_h(va_list list)
  * @i: number to print
  * Return: printed amount
  */
-int printH_l(unsigned int i)
+int printH_l(unsigned long int i)
 {
 	long int count, return_value = 0, tens = 1, c, num, base = 16;
 	char letter[] = {'A', 'B', 'C', 'D', 'E', 'F'};
