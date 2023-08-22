@@ -20,9 +20,11 @@ int _putchar(char c);
 int printc(va_list list);
 int prints(va_list list);
 int printb(va_list list);
+
 int printd(va_list list);
 int printd_l(va_list list);
 int printd_h(va_list list);
+
 int printu(va_list list);
 int printo(va_list list);
 int printh(unsigned int);
@@ -31,12 +33,17 @@ int printH(unsigned int);
 int printHEX(va_list list);
 int printS(va_list list);
 int printp(va_list list);
+
 int tnirp(va_list list);
 int print_rot13(va_list list);
+
 int _printf(const char *format, ...);
+
 int no_of_digits(unsigned int i, int base);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
+
 int (*check(const char *ch, int index))(va_list list);
+int check2(const char *ch, int index);
 
 #endif

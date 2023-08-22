@@ -48,6 +48,7 @@ int _printf(const char *format, ...)
 
 			else
 				(return_value) += ifcheck(format[count]);
+			count += check2(format, count);
 		}
 		else
 		{
