@@ -39,6 +39,10 @@ int main(void)
 	printf("%d\n", _printf("%p ", &i));
 	printf("%d\n", _printf("%R", "string"));
 	printf("%d\n", _printf("%r", "string"));
+	printf("%d\n", _printf("%ld_ld ", 54338)), printf("%ld ", 54338);
+	printf("%d\n", _printf("%hd_hd ", 54338)), printf("%hd ", 54338);
+	printf("%d\n", _printf("%li_li ", 54338)), printf("%li ", 54338);
+	printf("%d\n", _printf("%hi_hi ", 54338)), printf("%hi ", 54338);
 
 	return (0);
 }

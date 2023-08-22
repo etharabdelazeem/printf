@@ -21,6 +21,8 @@ int (*check(const char *ch, int index))(va_list list)
 		{" o", printo}, {" x", printhex},
 		{"#i", printd}, {"#d", printd},
 		{"#u", printu}, {"p", printp},
+		{"hd", printd_h}, {"ld", printd_l},
+		{"hi", printd_h}, {"li", printd_l},
 		{"r", tnirp}, {"R", print_rot13},
 		{NULL, NULL}
 	};
