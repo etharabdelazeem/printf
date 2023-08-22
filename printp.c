@@ -7,11 +7,10 @@
  */
 int printp(va_list list)
 {
-	int *ptr;
+	void *ptr;
 	char *str = "(nil)";
-	long int a;
-	int b;
-	int i;
+	unsigned long int a;
+	int b, int i;
 
 	ptr = va_arg(list, void *);
 	if (!ptr)
