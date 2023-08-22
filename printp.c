@@ -7,13 +7,13 @@
  */
 int printp(va_list list)
 {
-	void *ptr;
+	int *ptr;
 	char *str = "(nil)";
 	long int a;
 	int b;
 	int i;
 
-	ptr = va_arg(list, void*);
+	ptr = va_arg(list, int*);
 	if (ptr == NULL)
 	{
 		for (i = 0; str[i] != '\0'; i++)
