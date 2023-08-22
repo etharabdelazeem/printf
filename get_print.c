@@ -3,6 +3,7 @@
 /**
  * check - checks the letter after %
  * @ch: pointer to function
+ * @index: location of ch in the array format
  * Return: pointer to function
  */
 int (*check(const char *ch, int index))(va_list list)
