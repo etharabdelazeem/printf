@@ -42,12 +42,6 @@ int printHEX(va_list list)
 	unsigned int i2;
 
 	i = va_arg(list, int);
-	if (i < 0)
-	{
-		_putchar('-');
-		(return_value)++;
-		i2 = -i * 1;
-	}
 	i2 = i;
 	(return_value) += printH(i2);
 	return (return_value);

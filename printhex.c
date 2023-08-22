@@ -42,13 +42,8 @@ int printhex(va_list list)
 	unsigned int i2;
 
 	i = va_arg(list, int);
-	if (i < 0)
-	{
-		_putchar('-');
-		(return_value)++;
-		i2 = -1 * i;
-	}
-	else if (i == 0)
+
+	if (i == 0)
 	{
 		_putchar('0');
 		return (1);
