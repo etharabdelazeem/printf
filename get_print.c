@@ -20,7 +20,7 @@ int (*check(const char *ch, int index))(va_list list)
 	first_index = index;
 	while (functions[i].ch)
 	{
-		if (ch[index] == functions[i].ch[j])	
+		if (ch[index] == functions[i].ch[j])
 		{
 			if (functions[i].ch[j + 1] != '\0')
 				index++, j++;

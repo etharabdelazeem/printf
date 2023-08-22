@@ -6,27 +6,28 @@
  */
 int printh(unsigned int i)
 {
-	int count, return_value = 0, tens = 1, c, num, base = 16;
+	int return_value = 0, base = 16;
 	char letter[] = {'a', 'b', 'c', 'd', 'e', 'f'};
+	unsigned int rem;
 
-	count = no_of_digits(i, base);
-	c = count - 1;
-	while (c)
+	rem = i % 16;
+	if (i == 0)
+		return (return_value);
+	if (i == 1)
 	{
-		tens *= base;
-		c--;
+		_putchar(i + '0');
+		return (return_value);
 	}
-	while (count)
-	{
-		num = (i / tens) % base;
-		if (num > 9)
-			_putchar(letter[num - 10]);
-		else
-			_putchar('0' + num);
-		(return_value)++;
-		tens /= base;
-		count--;
-	}
+
+	printh(i / 16);
+
+	if (rem > 9)
+		_putchar(letter[rem - 10]);
+	else
+		_putchar(rem + '0');
+
+	(return_value) = no_of_digits(i, base);
+
 	return (return_value);
 }
 
@@ -47,9 +48,14 @@ int printhex(va_list list)
 		(return_value)++;
 		i2 = -1 * i;
 	}
+	else if (i == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	else
 		i2 = i;
-	return_value = printh(i2);
+	(return_value) = printh(i2);
 
 	return (return_value);
 }
