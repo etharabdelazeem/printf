@@ -7,7 +7,7 @@
  */
 int printp(va_list list)
 {
-	unsigned int *ptr;
+	int *ptr;
 	char *str = "(nil)";
 	long int a;
 	int b;
