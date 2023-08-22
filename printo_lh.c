@@ -22,6 +22,8 @@ int printo_h(va_list list)
 	while (count)
 	{
 		num = (i / tens) % base;
+		if (num < 0)
+			num *= -1;
 		_putchar('0' + num);
 		(return_value)++;
 		tens /= base;
