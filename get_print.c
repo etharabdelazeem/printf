@@ -74,6 +74,8 @@ int check2(const char *ch, int index)
 		{"hi", printd_h}, {"li", printd_l},
 		{"hu", printu_h}, {"lu", printu_l},
 		{"ho", printo_h}, {"lo", printo_l},
+		{"hx", printhex_h}, {"lx", printhex_l},
+		{"hX", printHEX_h}, {"lX", printHEX_l},
 		{"r", tnirp}, {"R", print_rot13},
 		{NULL, NULL}
 	};
