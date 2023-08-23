@@ -1,0 +1,41 @@
+.TH _printf 3 "August 22 2023" "1.0" "manual fo _printf"
+.SH manual for _printf function
+
+.B _printf
+- custom version for printf function.
+
+SH DESCRIPTION
+.SH ""
+
+The printf function sends formatted output to stdout.
+A custom _printf() for learning purposes was developed by c#17 students Huda & Ethar as a project in ALX.
+_printf() function format string is a character string, beginning and ending in its initial shift state, if any.
+
+.SS Compilation
+
+.P
+.RS
+#include "main.h"
+
+$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c
+$ gcc -Wall -Werror -Wextra -pedantic -g -Wno-format *.c (for gdb debbuging)
+.RE
+
+
+.SS Printing
+.RS
+
+int _printf(const char *[FORMAT], ...);
+
+.IT
+.B d, i, o, x, X, u, b, S, s, c, + l, h
+These are the handled specifiers
+
+.SS Return Value
+
+Return value is a n number of characters except NULL
+
+rbna yinsornaa >>>
+
+u of k
+HudaOmer and etharabdelazeem
